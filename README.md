@@ -117,7 +117,7 @@ Contribuições são bem-vindas! Para contribuir:
 4. Push para o branch (`git push origin minha-feature`).
 5. Abra um Pull Request.
 
-Consulte o arquivo CONTRIBUTING.md para mais detalhes.  
+Consulte o arquivo [CONTRIBUTING.md](./CONTRIBUTING.md) para mais detalhes.  
 
 ## Licença
 
