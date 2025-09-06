@@ -18,7 +18,11 @@ Bem-vindo ao **Connect**! Este projeto tem como objetivo gerenciar eventos, part
 
 ## Visão Geral
 
-[a ser adicionado: descrição detalhada do projeto, seu objetivo e público-alvo.]
+O **Connect** é uma API desenvolvida em Python com o objetivo de facilitar o gerenciamento de eventos e participantes, além de permitir a geração de links personalizados para cada evento. A aplicação foi pensada para ser simples de integrar a outros sistemas e fácil de utilizar, tanto para desenvolvedores quanto para usuários finais.
+
+Com o Connect, é possível cadastrar eventos, adicionar participantes, gerar e rastrear links exclusivos para divulgação e acompanhar o engajamento dos participantes por meio de rankings. O projeto é modular, utiliza boas práticas de desenvolvimento e está aberto para contribuições da comunidade.
+
+Ideal para equipes que desejam organizar eventos, monitorar a participação e engajamento de usuários, ou integrar funcionalidades de eventos em suas próprias
 
 ## Funcionalidades
 
@@ -26,7 +30,6 @@ Bem-vindo ao **Connect**! Este projeto tem como objetivo gerenciar eventos, part
 - Cadastro de participantes
 - Geração de links personalizados para eventos
 - Ranking de participantes por link
-- [a ser adicionado: outras funcionalidades]
 
 ## Tecnologias Utilizadas
 
@@ -41,7 +44,7 @@ Bem-vindo ao **Connect**! Este projeto tem como objetivo gerenciar eventos, part
 
 1. **Clone o repositório:**
    ```sh
-   git clone [a ser adicionado: URL do repositório]
+   git clone https://github.com/mgouveas/api_connect_event.git
    cd connect
    ```
 
@@ -115,11 +118,10 @@ Contribuições são bem-vindas! Para contribuir:
 5. Abra um Pull Request.
 
 Consulte o arquivo CONTRIBUTING.md para mais detalhes.  
-[a ser adicionado: regras de contribuição, padrões de código, etc.]
 
 ## Licença
 
-[a ser adicionado: tipo de licença, ex: MIT, Apache 2.0, etc.]
+MIT
 
 ## Contato
 
