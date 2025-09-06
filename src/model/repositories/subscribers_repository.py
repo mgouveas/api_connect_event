@@ -1,3 +1,4 @@
+from sqlalchemy import func, desc
 from src.model.configs.connection import DBConnectionHandler
 from src.model.entities.participantes import Participantes
 from .interfaces.subscribers_repository import SubscribersRepositoryInterface
@@ -28,5 +29,39 @@ class SubscribersRepository(SubscribersRepositoryInterface):
                     .one_or_none()
                 )
                 return data
+            except Exception as exception:
+                raise exception
+            
+    def select_subscribers_by_link(self, link: str, event_id: int) -> list:
+        with DBConnectionHandler() as db:
+            try:
+                data = (
+                    db.session
+                    .query(Participantes)
+                    .filter(Participantes.link == link, Participantes.evento_id == event_id)
+                    .all()
+                )
+                return data
+            except Exception as exception:
+                raise exception
+            
+    def get_ranking(self, event_id: int) -> list:
+        with DBConnectionHandler() as db:
+            try:
+                result = (
+                    db.session
+                    .query(
+                        Participantes.link, 
+                        func.count(Participantes.id).label("total")
+                    )
+                    .filter(
+                        Participantes.evento_id == event_id, 
+                        Participantes.link.isnot(None)
+                    )
+                    .group_by(Participantes.link)
+                    .order_by(desc("total"))
+                    .all()
+                ) 
+                return result
             except Exception as exception:
                 raise exception
